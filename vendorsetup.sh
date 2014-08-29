@@ -1,1 +1,1 @@
-add_lunch_combo slim_m4-eng
+add_lunch_combo slim_m4-userdebug
