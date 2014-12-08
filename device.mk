@@ -33,17 +33,6 @@ PRODUCT_PACKAGES += \
     init.m4.usb.rc \
     ueventd.m4.rc
 
-# Recovery
-PRODUCT_PACKAGES += \
-    init.recovery.m4.rc \
-    lpm.rc \
-    choice_fn \
-    power_test \
-    offmode_charging \
-    offmode_charging_res_images \
-    chargeled \
-    detect_key
-
 # QC thermald config
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/thermald.conf:system/etc/thermald.conf
 
@@ -93,8 +82,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
 
 # Keystore
-#PRODUCT_PACKAGES += \
-#    keystore.msm8960
+PRODUCT_PACKAGES += \
+    keystore.msm8960
 
 # Torch
 PRODUCT_PACKAGES += \
@@ -107,7 +96,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb
+    persist.sys.usb.config=mtp
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true \
